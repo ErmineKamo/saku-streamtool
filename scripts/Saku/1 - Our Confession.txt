@@ -102,7 +102,7 @@ Doth thou kill the cat? Or not?
 
 Beyond lies... the inside of the cat's stomach.
 
-lsp 8,":s#FFFFFF#FFFFFF#FFFFFF Doth thou kill the cat? Or not?",140,100lsp 9,":s#FFFFFF#FFFFFF#FFFFFF Beyond lies... the inside of the cat's stomach.",140,150This time, let's make Krauss and Natsuhi into accomplices.
+This time, let's make Krauss and Natsuhi into accomplices.
 
 But... Natsuhi has a lot of pride, so even if I flashed an enormous sum of money in front of her, 
 

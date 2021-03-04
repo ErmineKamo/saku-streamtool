@@ -1,21 +1,28 @@
 <style>
-    #textbox {
+    #textboxContainer {
         background-image: url('textbox.png');
         width: 1376px;
         height: 274px;
         padding-top: 30px;
         padding-left: 30px;
+        background-repeat: no-repeat;
         font-size: xx-large;
         color: white;
-        background-repeat: no-repeat;
-        font-family: 'Sazanami Gothic';
+        font-family: 'Sazanami Gothic', monospace;
+    }
+    #textbox {
+        width: 1200px;
     }
 </style>
-<div id='textbox'>
-This site is meant to be used as an OBS widget.<br>
-Please copy the link from your address bar and add it to a Browser Source.<br>
-Use the width/height of <span id='width'></span>x<span id='height'></span>, and the default custom CSS value.<br>
-Then, right-click the Browser Source and use the Interact button to work with the app.<br>
-If you would like to bypass this check and run the app in your normal browser, add &force to the end of the URL in your address bar.<br>
+<div id='textboxContainer'>
+    <div id='textbox'>
+        This site is meant to be used as an OBS widget.<br>
+        Please copy the link from your address bar and add it to a Browser Source.<br>
+        Use the width/height of <span id='width'></span>x<span id='height'></span>, and the default custom CSS
+        value.<br>
+        Then, right-click the Browser Source and use the Interact button to work with the app.<br>
+        If you would like to bypass this check and run the app in your normal browser, add &force to the end of the URL
+        in your address bar.<br>
+    </div>
 </div>
 <script src='render.js'></script>
