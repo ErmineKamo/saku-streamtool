@@ -27,7 +27,7 @@ async function main () {
     typeText(script[currentLine], handleClick)
     currentLine++
   }
-  typeText('Click to begin...', handleClick)
+  typeText('Right click Browser Source > Interact, then click that window to begin...', handleClick)
 }
 if (window.obsstudio || new URLSearchParams(location.search).get('force') !== null) {
   main()
