@@ -35,7 +35,7 @@ async function main () {
     document.getElementById('textboxContainer').style.color = 'yellow'
     if (event.deltaY < 0) {
       currentLine--
-    } else if (currentLine + 1 < maxLine) {
+    } else if (currentLine < maxLine) {
       currentLine++
     }
     if (currentLine < 0) currentLine = 0
