@@ -29,5 +29,13 @@ async function main () {
   }
   typeText('Click to begin...', handleClick)
 }
-
-main()
+if (window.obsstudio || new URLSearchParams(location.search).get('force') !== null) {
+  main()
+} else {
+  const textbox = document.getElementById('textbox')
+  textbox.style.backgroundImage = 'none'
+  textbox.style.color = 'black'
+  const computedStyle = window.getComputedStyle(textbox)
+  document.getElementById('width').innerText = computedStyle.width.replace('px', '')
+  document.getElementById('height').innerText = computedStyle.height.replace('px', '')
+}
