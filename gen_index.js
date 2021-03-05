@@ -10,3 +10,4 @@ for (const i of scripts) {
   }
 }
 fs.writeFileSync('index.html', out, 'utf-8')
+fs.writeFileSync('index_force.html', out.replace(/\.txt/g, '.txt&force'), 'utf-8')
