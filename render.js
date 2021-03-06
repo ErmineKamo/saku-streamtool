@@ -2,13 +2,23 @@
 const speed = 30
 function typeText (text, blockHandler) {
   document.getElementById('textboxContainer').style.color = 'white'
-  const textbox = document.getElementById('textbox')
+  const textboxRoot = document.getElementById('textbox') // The actual textbox element
+  let textbox = textboxRoot // The element where text is actually being output (may be child)
   textbox.innerText = ''
   let i = 0
   function typeInner () {
     document.body.removeEventListener('click', blockHandler)
     if (i < text.length) {
-      textbox.textContent += text[i]
+      const colorHex = text.substring(i + 1, i + 7)
+      if (text[i] === '#' && colorHex.match(/[0-9a-fA-F]{6}/)) {
+        const colorSpan = document.createElement('span')
+        colorSpan.style.color = `#${colorHex}`
+        textboxRoot.appendChild(colorSpan)
+        textbox = colorSpan
+        i += 6
+      } else {
+        textbox.textContent += text[i]
+      }
       i++
       setTimeout(typeInner, speed)
     } else {
